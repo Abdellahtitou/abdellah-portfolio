@@ -183,6 +183,7 @@ const handleSubmit = (event: Event) => {
                 href="https://www.linkedin.com/in/titou-abdellah-40b6a1199"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="rounded-xl border border-slate-800 bg-slate-900 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-blue-500 hover:text-blue-400"
               >
                 LinkedIn
               </a>
