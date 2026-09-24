@@ -1,48 +1,72 @@
-# mon-portfolio
+# Abdellah Titou — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Portfolio professionnel de **Abdellah Titou**, Développeur Web Full Stack Junior basé à Rabat, Maroc.
 
-## Recommended IDE Setup
+## 👨‍💻 À propos
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Je suis un Développeur Web Full Stack Junior spécialisé dans le développement d'applications web modernes.
 
-## Recommended Browser Setup
+Je travaille principalement avec :
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue.js
+- React.js
+- Laravel
+- PHP
+- Node.js
+- MySQL
+- MongoDB
 
-## Type Support for `.vue` Imports in TS
+## 🛠️ Technologies
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Frontend
+- Vue.js
+- React.js
+- JavaScript
+- TypeScript
+- HTML5
+- CSS3
 
-## Customize configuration
+### Backend
+- Laravel
+- PHP
+- Node.js
+- Express.js
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Bases de données
+- MySQL
+- MongoDB
 
-## Project Setup
+### Outils
+- Git
+- GitHub
+- REST API
+- JWT
+- Vite
 
-```sh
-npm install
-```
+## 🚗 Projet principal
 
-### Compile and Hot-Reload for Development
+### Application de gestion de location de voitures
 
-```sh
-npm run dev
-```
+Application web Full Stack permettant de gérer une activité de location de voitures.
 
-### Type-Check, Compile and Minify for Production
+Fonctionnalités principales :
 
-```sh
-npm run build
-```
+- Gestion des véhicules
+- Gestion des clients
+- Gestion des locations
+- Gestion des contrats
+- Gestion de la maintenance
+- Gestion des rendez-vous
+- Authentification sécurisée
+- API REST
 
-### Lint with [ESLint](https://eslint.org/)
+### Architecture
 
-```sh
-npm run lint
-```
+```text
+Vue 3 + TypeScript
+        ↓
+HTTP + JSON + JWT
+        ↓
+Laravel + PHP
+        ↓
+MySQL
