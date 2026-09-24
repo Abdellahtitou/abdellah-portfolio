@@ -95,7 +95,7 @@
           </a>
 
           <a
-            href="https://www.linkedin.com/in/titouabdellah"
+            href="https://www.linkedin.com/in/titou-abdellah-40b6a1199"
             target="_blank"
             rel="noopener noreferrer"
             class="text-sm font-medium text-slate-400 transition hover:text-blue-500"
