@@ -51,7 +51,7 @@ const education = [
 
         <div class="space-y-8">
           <article
-            v-for="(item, index) in education"
+            v-for="item in education"
             :key="item.school"
             class="relative md:pl-16"
           >
