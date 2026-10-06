@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: 'About',
+}
+</script>
+
 <template>
   <section id="about" class="bg-slate-950 px-6 py-24">
     <div class="mx-auto max-w-6xl">

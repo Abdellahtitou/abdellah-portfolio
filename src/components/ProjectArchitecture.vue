@@ -39,6 +39,12 @@ const architecture = [
 ]
 </script>
 
+<script lang="ts">
+export default {
+  name: 'ProjectArchitecture',
+}
+</script>
+
 <template>
   <section class="bg-slate-950 px-6 py-24">
     <div class="mx-auto max-w-6xl">

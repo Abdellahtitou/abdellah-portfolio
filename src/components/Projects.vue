@@ -37,6 +37,12 @@ const project = {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Projects',
+}
+</script>
+
 <template>
   <section id="projects" class="bg-slate-900 px-6 py-24">
     <div class="mx-auto max-w-6xl">

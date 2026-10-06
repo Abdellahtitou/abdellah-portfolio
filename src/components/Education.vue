@@ -21,6 +21,12 @@ const education = [
 ]
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Education',
+}
+</script>
+
 <template>
   <section id="education" class="bg-slate-950 px-6 py-24">
     <div class="mx-auto max-w-6xl">

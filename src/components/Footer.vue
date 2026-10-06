@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: 'FooterSection',
+}
+</script>
+
 <template>
   <footer class="border-t border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-10">

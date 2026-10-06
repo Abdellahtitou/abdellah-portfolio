@@ -8,6 +8,12 @@ const closeMenu = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Navbar',
+}
+</script>
+
 <template>
   <nav
     class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.35)]"

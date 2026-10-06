@@ -84,6 +84,12 @@ const experiences = [
 ]
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Experience',
+}
+</script>
+
 <template>
   <section id="experience" class="bg-slate-900 px-6 py-24">
     <div class="mx-auto max-w-6xl">

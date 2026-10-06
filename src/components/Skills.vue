@@ -35,6 +35,12 @@ const concepts = [
 ]
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Skills',
+}
+</script>
+
 <template>
   <section id="skills" class="bg-slate-950 px-6 py-24">
     <div class="mx-auto max-w-6xl">

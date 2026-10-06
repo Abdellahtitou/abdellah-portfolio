@@ -22,6 +22,12 @@ const handleSubmit = (event: Event) => {
 };
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Contact',
+}
+</script>
+
 <template>
   <section id="contact" class="bg-slate-900 px-6 py-24">
     <div class="mx-auto max-w-6xl">

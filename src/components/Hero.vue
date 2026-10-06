@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: 'Hero',
+}
+</script>
+
 <template>
   <section
     id="home"
