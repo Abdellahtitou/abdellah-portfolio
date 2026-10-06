@@ -204,6 +204,24 @@ const project = {
           </div>
         </div>
 
+        <div class="flex flex-wrap gap-4 p-8 md:px-10 md:pb-10">
+          <a
+            :href="project.github"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_15px_30px_rgba(59,130,246,0.25)] transition hover:-translate-y-0.5 hover:brightness-110"
+          >
+            Voir le dépôt GitHub
+          </a>
+
+          <a
+            href="#contact"
+            class="rounded-xl border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-blue-400 hover:text-blue-400"
+          >
+            Me faire une proposition
+          </a>
+        </div>
+
         <!-- Architecture -->
         <div class="border-t border-slate-800 p-8 md:p-10">
           <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">

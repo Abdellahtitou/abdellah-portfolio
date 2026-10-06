@@ -40,13 +40,16 @@ const handleSubmit = (event: Event) => {
       </div>
 
       <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-        <!-- Contact information -->
-        <div class="rounded-3xl border border-slate-800 bg-slate-950 p-8 md:p-10">
-          <h3 class="text-2xl font-bold text-white">Mes coordonnées</h3>
+        <div class="rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-[0_18px_40px_rgba(15,23,42,0.25)] md:p-10">
+          <span class="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
+            Disponible
+          </span>
+
+          <h3 class="mt-4 text-2xl font-bold text-white">Mes coordonnées</h3>
 
           <p class="mt-3 leading-7 text-slate-400">
             Je suis actuellement à la recherche d'une opportunité en tant que Développeur
-            Web Full Stack Junior.
+            Web Full Stack Junior, avec une forte envie de contribuer à des projets concrets.
           </p>
 
           <div class="mt-8 space-y-5">
@@ -201,12 +204,17 @@ const handleSubmit = (event: Event) => {
         </div>
 
         <!-- Form -->
-        <div class="rounded-3xl border border-slate-800 bg-slate-950 p-8 md:p-10">
+        <div class="rounded-3xl border border-slate-800 bg-slate-950 p-8 shadow-[0_18px_40px_rgba(15,23,42,0.2)] md:p-10">
           <h3 class="text-2xl font-bold text-white">Envoyer un message</h3>
 
           <p class="mt-2 text-sm text-slate-500">
-            Remplissez le formulaire et votre application email s'ouvrira automatiquement.
+            Partagez votre besoin, votre idée ou votre projet. Je vous répondrai rapidement.
           </p>
+
+          <div class="mt-5 flex gap-3">
+            <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">Réponse rapide</span>
+            <span class="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">Ouvert aux missions</span>
+          </div>
 
           <form class="mt-8 space-y-5" @submit.prevent="handleSubmit">
             <!-- Name -->
