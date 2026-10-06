@@ -14,15 +14,20 @@ import Footer from './components/Footer.vue'
 <template>
   <Navbar />
 
-  <main class="bg-slate-950">
-    <Hero />
-    <About />
-    <Skills />
-    <Experience />
-    <Education />
-    <Projects />
-    <ProjectArchitecture />
-    <Contact />
+  <main class="relative overflow-hidden bg-[#07131f]">
+    <div class="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.12),_transparent_60%)]" />
+    <div class="absolute inset-x-0 top-[30rem] h-96 bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.08),_transparent_60%)]" />
+
+    <div class="relative z-10">
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Education />
+      <Projects />
+      <ProjectArchitecture />
+      <Contact />
+    </div>
   </main>
 
   <Footer />

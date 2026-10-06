@@ -10,69 +10,66 @@ const closeMenu = () => {
 
 <template>
   <nav
-    class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-md"
+    class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.35)]"
   >
     <div
       class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
     >
-      <!-- Logo -->
       <a
         href="#home"
-        class="text-2xl font-bold text-white"
+        class="text-2xl font-bold tracking-tight text-white transition hover:text-blue-400"
         @click="closeMenu"
       >
         Abdellah Titou
       </a>
 
-      <!-- Desktop Menu -->
       <div class="hidden items-center gap-8 md:flex">
         <a
           href="#about"
-          class="text-sm text-slate-300 transition hover:text-blue-500"
+          class="text-sm text-slate-300 transition hover:text-blue-400"
         >
           À propos
         </a>
 
         <a
           href="#skills"
-          class="text-sm text-slate-300 transition hover:text-blue-500"
+          class="text-sm text-slate-300 transition hover:text-blue-400"
         >
           Compétences
         </a>
 
         <a
           href="#experience"
-          class="text-sm text-slate-300 transition hover:text-blue-500"
+          class="text-sm text-slate-300 transition hover:text-blue-400"
         >
           Expériences
         </a>
 
         <a
           href="#education"
-          class="text-sm text-slate-300 transition hover:text-blue-500"
+          class="text-sm text-slate-300 transition hover:text-blue-400"
         >
           Formation
         </a>
 
         <a
           href="#projects"
-          class="text-sm text-slate-300 transition hover:text-blue-500"
+          class="text-sm text-slate-300 transition hover:text-blue-400"
         >
           Projets
         </a>
 
         <a
           href="#contact"
-          class="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700"
+          class="rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-2.5 text-sm font-medium text-white shadow-[0_12px_24px_rgba(59,130,246,0.4)] transition hover:brightness-110"
         >
           Contact
         </a>
       </div>
 
-      <!-- Mobile Button -->
       <button
         type="button"
-        class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700 text-slate-300 transition hover:border-blue-500 hover:text-blue-500 md:hidden"
+        class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 transition hover:border-blue-400 hover:text-blue-400 md:hidden"
         aria-label="Ouvrir le menu"
         @click="isMenuOpen = !isMenuOpen"
       >
@@ -110,16 +107,14 @@ const closeMenu = () => {
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div
       v-if="isMenuOpen"
-      class="border-t border-slate-800 bg-slate-950 md:hidden"
+      class="border-t border-slate-800 bg-slate-950/95 md:hidden"
     >
       <div class="mx-auto flex max-w-6xl flex-col px-6 py-4">
-
         <a
           href="#about"
-          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-500"
+          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-400"
           @click="closeMenu"
         >
           À propos
@@ -127,7 +122,7 @@ const closeMenu = () => {
 
         <a
           href="#skills"
-          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-500"
+          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-400"
           @click="closeMenu"
         >
           Compétences
@@ -135,7 +130,7 @@ const closeMenu = () => {
 
         <a
           href="#experience"
-          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-500"
+          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-400"
           @click="closeMenu"
         >
           Expériences
@@ -143,7 +138,7 @@ const closeMenu = () => {
 
         <a
           href="#education"
-          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-500"
+          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-400"
           @click="closeMenu"
         >
           Formation
@@ -151,7 +146,7 @@ const closeMenu = () => {
 
         <a
           href="#projects"
-          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-500"
+          class="border-b border-slate-800 py-4 text-slate-300 transition hover:text-blue-400"
           @click="closeMenu"
         >
           Projets
@@ -159,12 +154,11 @@ const closeMenu = () => {
 
         <a
           href="#contact"
-          class="mt-4 rounded-lg bg-blue-600 px-5 py-3 text-center font-medium text-white transition hover:bg-blue-700"
+          class="mt-4 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-3 text-center font-medium text-white shadow-[0_12px_24px_rgba(59,130,246,0.4)]"
           @click="closeMenu"
         >
           Me contacter
         </a>
-
       </div>
     </div>
   </nav>
