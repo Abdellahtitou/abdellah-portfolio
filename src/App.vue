@@ -9,6 +9,16 @@ import Projects from './components/Projects.vue'
 import ProjectArchitecture from './components/ProjectArchitecture.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+
+import { onMounted } from "vue";
+
+onMounted(() => {
+  fetch("/api/visitor", {
+    method: "POST",
+  }).catch((error) => {
+    console.error("Visitor notification error:", error);
+  });
+});
 </script>
 
 <template>
