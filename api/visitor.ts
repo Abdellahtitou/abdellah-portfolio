@@ -7,19 +7,16 @@ export default async function handler(req: any, res: any) {
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
 
+    console.log("Telegram config:", {
+      hasBotToken: !!botToken,
+      hasChatId: !!chatId,
+    });
+
     if (!botToken || !chatId) {
       return res.status(500).json({
         message: "Telegram variables are missing",
       });
     }
-
-    const message = `🚀 Nouvelle visite sur ton portfolio !
-
-🌐 Site: ${req.headers.referer || "Inconnu"}
-📱 User-Agent: ${req.headers["user-agent"] || "Inconnu"}
-🕐 Date: ${new Date().toLocaleString("fr-FR", {
-      timeZone: "Africa/Casablanca",
-    })}`;
 
     const telegramResponse = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
@@ -30,14 +27,19 @@ export default async function handler(req: any, res: any) {
         },
         body: JSON.stringify({
           chat_id: chatId,
-          text: message,
+          text: "🚀 Test: quelqu'un vient de visiter mon portfolio !",
         }),
       }
     );
 
+    const telegramData = await telegramResponse.json();
+
+    console.log("Telegram response:", telegramData);
+
     if (!telegramResponse.ok) {
       return res.status(500).json({
-        message: "Telegram notification failed",
+        message: "Telegram error",
+        telegram: telegramData,
       });
     }
 
@@ -45,7 +47,7 @@ export default async function handler(req: any, res: any) {
       success: true,
     });
   } catch (error) {
-    console.error(error);
+    console.error("API ERROR:", error);
 
     return res.status(500).json({
       message: "Server error",
