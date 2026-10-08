@@ -1,60 +1,58 @@
 export default async function handler(req: any, res: any) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' })
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method not allowed" });
   }
 
   try {
-    const botToken = (process.env.TELEGRAM_BOT_TOKEN ?? '').trim()
-    const chatId = (process.env.TELEGRAM_CHAT_ID ?? '').trim()
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
 
-    console.log('Telegram config:', {
-      hasBotToken: !!botToken,
-      hasChatId: !!chatId,
-    })
-
-    const missingEnvVars = [
-      !botToken ? 'TELEGRAM_BOT_TOKEN' : null,
-      !chatId ? 'TELEGRAM_CHAT_ID' : null,
-    ].filter(Boolean) as string[]
-
-    if (missingEnvVars.length > 0) {
+    if (!botToken || !chatId) {
       return res.status(500).json({
-        message:
-          'Telegram environment variables are missing. Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in your Vercel project settings.',
-        missing: missingEnvVars,
-      })
+        message: "Telegram variables are missing",
+      });
     }
 
-    const telegramResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: "🚀 Test: quelqu'un vient de visiter mon portfolio !",
-      }),
-    })
+    const message = `🚀 Nouvelle visite sur ton portfolio !
 
-    const telegramData = await telegramResponse.json()
+🌐 Site: ${req.headers.referer || "Inconnu"}
+📱 User-Agent: ${req.headers["user-agent"] || "Inconnu"}
+🕐 Date: ${new Date().toLocaleString("fr-FR", {
+      timeZone: "Africa/Casablanca",
+    })}`;
 
-    console.log('Telegram response:', telegramData)
+    const telegramResponse = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+        }),
+      }
+    );
 
     if (!telegramResponse.ok) {
+      const telegramData = await telegramResponse.text();
+
+      console.error("Telegram error:", telegramData);
+
       return res.status(500).json({
-        message: 'Telegram error',
-        telegram: telegramData,
-      })
+        message: "Telegram notification failed",
+      });
     }
 
     return res.status(200).json({
       success: true,
-    })
+    });
   } catch (error) {
-    console.error('API ERROR:', error)
+    console.error("API ERROR:", error);
 
     return res.status(500).json({
-      message: 'Server error',
-    })
+      message: "Server error",
+    });
   }
 }
